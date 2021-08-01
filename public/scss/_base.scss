@@ -1,0 +1,44 @@
+// colors
+
+$header-color: hsl(238, 29%, 16%);
+$header-accent: hsl(14, 88%, 65%);
+$subheader-color: hsl(237, 12%, 33%);
+$content-color: hsl(240, 6%, 50%);
+
+$bg-gradient-start: hsl(273, 75%, 66%);
+$bg-gradient-end: hsl(240, 73%, 65%);
+
+$divider-color: hsl(240, 5%, 91%);
+
+
+// breakpoints
+$small-mobile: 350px;
+$large-mobile: 450px;
+$small-tablet: 550px;
+$large-tablet: 800px;
+$small-laptop: 1200px;
+$large-laptop: 1400px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient($bg-gradient-start, $bg-gradient-end);
+}
+
+@mixin mobileImg {
+    display: block;
+    @media (min-width: $large-tablet) {
+        display: none;
+    }
+}
+
+@mixin desktopImg {
+    display: none;
+    @media (min-width: $large-tablet) {
+        display: block;
+    }
+}

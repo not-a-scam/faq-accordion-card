@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(#af67e9, #6565e7);
+}
+
+.desktop-img {
+  display: none;
+}
+@media (min-width: 800px) {
+  .desktop-img {
+    display: block;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=styles.css.map */
