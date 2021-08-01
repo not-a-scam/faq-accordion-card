@@ -9,7 +9,18 @@ $bg-gradient-start: hsl(273, 75%, 66%);
 $bg-gradient-end: hsl(240, 73%, 65%);
 
 $divider-color: hsl(240, 5%, 91%);
+$card-color: #fff;
 
+
+//fonts
+$font-weights: (
+    "regular": 400,
+    "bold": 700
+);
+
+@function weight($weight){
+    @return map-get($font-weights, $weight)
+}
 
 // breakpoints
 $small-mobile: 350px;
@@ -19,6 +30,26 @@ $large-tablet: 800px;
 $small-laptop: 1200px;
 $large-laptop: 1400px;
 
+@mixin displayImg($isMobile) {
+    @if $isMobile {
+        display: block;
+        @media (min-width: $large-tablet) {
+            display: none;
+        }
+    } @else {
+        display: none;
+        @media (min-width: $large-tablet) {
+            display: block;
+        }
+    }
+
+}
+
+@mixin relativeContainer{
+    position: relative;
+    width: 100%;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,19 +57,6 @@ $large-laptop: 1400px;
 }
 
 body {
-    background-image: linear-gradient($bg-gradient-start, $bg-gradient-end);
-}
-
-@mixin mobileImg {
-    display: block;
-    @media (min-width: $large-tablet) {
-        display: none;
-    }
-}
-
-@mixin desktopImg {
-    display: none;
-    @media (min-width: $large-tablet) {
-        display: block;
-    }
+    @include relativeContainer;
+    font-family: 'Kumbh Sans', sans-serif;
 }

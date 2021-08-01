@@ -1,7 +1,112 @@
 @use "./base" as *;
 
+.mobile-img{
+    @include displayImg(true);
+}
+
 .desktop-img{
-    @include desktopImg;
+    @include displayImg(false);
+}
+
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient($bg-gradient-start, $bg-gradient-end);
+}
+
+
+.faq-card{
+    background-color: $card-color;
+    border-radius: 8vw;
+    margin-top: 35%;
+    padding-bottom: 15%;
+
+    .card-title{
+        text-align: center;
+        font-size: 2em;
+        color: $header-color;
+        margin: 12% 0 6%;
+    }
+    .faq-visual-container{
+        @include relativeContainer;
+        .faq-main-graphic{
+            position: absolute;
+            margin: auto;
+            width: 85%;
+            right: 0;
+            left: 0;
+            padding-right: 7.7%;
+            transform: translate(0, -55%);
+        }
+
+        .faq-bg-graphic{
+            margin: auto;
+            width: 68%;
+        }
+    }
+
+    .faq-card-content{
+        padding: 0 7%;
+
+        .faq-dropdown{
+            @include relativeContainer;
+
+            .arrow-btn{
+                position: absolute;
+                margin: 5.5% 0 0;
+                right: 0;
+                top: 0;
+                border: none;
+                background-color: transparent;
+
+                .arrow-icon{
+                    height: .6em;
+                }
+            }
+
+            .faq-qn{
+                font-weight: weight(regular);
+                font-size: 83%;
+                color: $subheader-color;
+                padding: 6% 0;
+            }
+
+            .faq-ans{
+                display: none;
+            }
+
+            .faq-divider{
+                border-style: solid none none none;
+                border-width: 1px;
+                border-color: $divider-color;
+            }
+
+        }
+
+        .faq-dropdown.selected{
+            .faq-qn{
+                font-weight: weight(bold);
+                padding-bottom: 4%;
+                color: $header-color;
+            }
+
+            .faq-ans{
+                display: block;
+                font-weight: weight(regular);
+                font-size: 0.75rem;
+                line-height: 1.6;
+                color: $content-color;
+                margin-bottom: 5%;
+                width: 94%;
+            }
+            .arrow-icon{
+                transform: rotate(0.5turn);
+            }
+        }
+    }
+
+
 }
 
 .attribution { 
