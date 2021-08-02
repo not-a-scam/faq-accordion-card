@@ -24,6 +24,10 @@
         height: 100vh;
         margin: auto;
     }
+
+    @include widescreen{
+        padding: 7% 6%;
+    }
 }
 
 .faq-card{
@@ -68,8 +72,9 @@
                 top: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 1;
-                transform: scale(.8) translate(-62%, 25%);
+                transform: translate(-50%, 25%);
+                width: 35%;
+                z-index: 2;
             }
 
             .faq-cut-container{
@@ -83,6 +88,7 @@
                     bottom: 0;
                     padding: 0;
                     transform: scale(1.2) translate(-8%, 0);
+                    z-index: 1;
                 }
     
                 .faq-bg-graphic{
@@ -107,10 +113,18 @@
             color: $header-color;
             margin: 12% 0 6%;
 
+            @include tablet{
+                font-size: 3rem;
+            }
+
             @include desktop{
                 margin: 0 0 3%;
                 text-align: left;
 
+            }
+
+            @include widescreen{
+                font-size: 2.5rem;
             }
         }
 
@@ -127,6 +141,14 @@
 
                 .arrow-icon{
                     height: .6em;
+
+                    @include tablet{
+                        height: 1em;
+                    }
+                }
+
+                @include widescreen{
+                    margin-top: 3%;
                 }
             }
 
@@ -139,6 +161,14 @@
                 @include desktop{
                     padding: 5% 0;
                     font-size: 1.1rem;
+                }
+
+                @include tablet{
+                    font-size: 1.3rem;
+                }
+
+                @include widescreen{
+                    padding: 3% 0;
                 }
             }
 
@@ -163,6 +193,10 @@
                 @include desktop{
                     font-size: 1.1rem;
                 }
+
+                @include widescreen{
+                    padding-bottom: 2%;
+                }
             }
 
             .faq-ans{
@@ -176,6 +210,14 @@
                 @include desktop{
                     font-size: .9rem;
                 }
+
+                @include tablet{
+                    font-size: 1rem;
+                }
+
+                @include widescreen{
+                    margin-bottom: 2%;
+                }
             }
             .arrow-icon{
                 transform: rotate(0.5turn);
@@ -186,6 +228,10 @@
             padding: 6% 15% 6% 2%;
             width: 90%;
 
+        }
+
+        @include widescreen{
+            padding-top: 4%;
         }
     }
 

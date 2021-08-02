@@ -28,7 +28,7 @@ $large-mobile: 450px;
 $small-tablet: 550px;
 $large-tablet: 800px;
 $small-laptop: 1200px;
-$large-laptop: 1400px;
+$large-laptop: 1700px;
 
 @mixin desktop{
     @media (min-width: $small-laptop){
@@ -36,15 +36,27 @@ $large-laptop: 1400px;
     }
 }
 
+@mixin tablet {
+    @media (min-width: $small-tablet) and (max-width: $small-laptop) {
+        @content
+    }
+}
+
+@mixin widescreen {
+    @media (min-width: $large-laptop) {
+        @content
+    }
+}
+
 @mixin displayImg($isMobile) {
     @if $isMobile {
         display: block;
-        @media (min-width: $large-tablet) {
+        @media (min-width: $small-laptop) {
             display: none;
         }
     } @else {
         display: none;
-        @media (min-width: $large-tablet) {
+        @media (min-width: $small-laptop) {
             display: block;
         }
     }
