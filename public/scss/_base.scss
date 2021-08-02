@@ -22,13 +22,19 @@ $font-weights: (
     @return map-get($font-weights, $weight)
 }
 
-// breakpoints
+//breakpoints
 $small-mobile: 350px;
 $large-mobile: 450px;
 $small-tablet: 550px;
 $large-tablet: 800px;
 $small-laptop: 1200px;
 $large-laptop: 1400px;
+
+@mixin desktop{
+    @media (min-width: $small-laptop){
+        @content
+    }
+}
 
 @mixin displayImg($isMobile) {
     @if $isMobile {
@@ -49,6 +55,8 @@ $large-laptop: 1400px;
     position: relative;
     width: 100%;
 }
+
+
 
 * {
     box-sizing: border-box;

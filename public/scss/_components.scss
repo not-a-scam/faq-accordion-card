@@ -15,19 +15,34 @@
     background-image: linear-gradient($bg-gradient-start, $bg-gradient-end);
 }
 
+.container{
+    @include relativeContainer;
+    padding: 10% 6%;
+    overflow: auto;
+    @include desktop{
+        padding: 9% 6%;
+        height: 100vh;
+        margin: auto;
+    }
+}
 
 .faq-card{
+    @include relativeContainer;
     background-color: $card-color;
     border-radius: 8vw;
     margin-top: 35%;
     padding-bottom: 15%;
+    box-shadow: 0 20px 20px -13px $subheader-color;
+    height: 100%;
 
-    .card-title{
-        text-align: center;
-        font-size: 2em;
-        color: $header-color;
-        margin: 12% 0 6%;
+    @include desktop{
+        display: flex;
+        margin: auto auto;
+        width: 80%;
+        border-radius: 2rem;
+        padding-bottom: 0;
     }
+
     .faq-visual-container{
         @include relativeContainer;
         .faq-main-graphic{
@@ -44,10 +59,60 @@
             margin: auto;
             width: 68%;
         }
+
+        @include desktop{
+            width: 90%;
+            
+            .faq-box-graphic{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                z-index: 1;
+                transform: scale(.8) translate(-62%, 25%);
+            }
+
+            .faq-cut-container{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                .faq-main-graphic{
+                    margin: auto 0;
+                    top: 0;
+                    bottom: 0;
+                    padding: 0;
+                    transform: scale(1.2) translate(-8%, 0);
+                }
+    
+                .faq-bg-graphic{
+                    position: absolute;
+                    margin: auto 0;
+                    top: 0;
+                    bottom: 0;
+                    padding: 0;
+                    transform: scale(1.2) translate(-8%, 0);
+                    width: 85%;
+                }
+            }
+        }
     }
 
     .faq-card-content{
         padding: 0 7%;
+
+        .card-title{
+            text-align: center;
+            font-size: 2em;
+            color: $header-color;
+            margin: 12% 0 6%;
+
+            @include desktop{
+                margin-top: 20%;
+                text-align: left;
+
+            }
+        }
 
         .faq-dropdown{
             @include relativeContainer;
@@ -89,6 +154,10 @@
                 font-weight: weight(bold);
                 padding-bottom: 4%;
                 color: $header-color;
+
+                @include desktop{
+                    font-size: 90%;
+                }
             }
 
             .faq-ans{
@@ -103,6 +172,12 @@
             .arrow-icon{
                 transform: rotate(0.5turn);
             }
+        }
+
+        @include desktop{
+            padding: 0 15% 0 2%;
+            width: 90%;
+
         }
     }
 

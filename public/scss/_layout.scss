@@ -1,7 +1,0 @@
-@use "./base" as *;
-
-.container{
-    @include relativeContainer;
-    padding: 10% 6%;
-    overflow: auto;
-}
