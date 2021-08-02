@@ -48,7 +48,7 @@ body {
     margin: auto;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .container {
     padding: 7% 6%;
   }
@@ -147,7 +147,7 @@ body {
     text-align: left;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .faq-card .faq-card-content .card-title {
     font-size: 2.5rem;
   }
@@ -172,7 +172,7 @@ body {
     height: 1em;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .faq-card .faq-card-content .faq-dropdown .arrow-btn {
     margin-top: 3%;
   }
@@ -194,7 +194,7 @@ body {
     font-size: 1.3rem;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .faq-card .faq-card-content .faq-dropdown .faq-qn {
     padding: 3% 0;
   }
@@ -217,7 +217,7 @@ body {
     font-size: 1.1rem;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .faq-card .faq-card-content .faq-dropdown.selected .faq-qn {
     padding-bottom: 2%;
   }
@@ -241,7 +241,7 @@ body {
     font-size: 1rem;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .faq-card .faq-card-content .faq-dropdown.selected .faq-ans {
     margin-bottom: 2%;
   }
@@ -255,7 +255,7 @@ body {
     width: 90%;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .faq-card .faq-card-content {
     padding-top: 4%;
   }
